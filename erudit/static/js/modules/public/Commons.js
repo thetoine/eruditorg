@@ -1,3 +1,5 @@
+import '!!script!akkordion/dist/akkordion.min.js';
+
 class Commons {
 
   constructor() {
@@ -6,6 +8,7 @@ class Commons {
 
   init() {
     this.scrollToTop();
+    this.accordions();
   }
 
   /*
@@ -22,6 +25,13 @@ class Commons {
      $('html,body').animate( { scrollTop: 0 }, 750 );
      return false;
    });
+ }
+
+ accordions() {
+  //  akkordion('.accordeon');
+  // akkordion.on('open', function() {
+  //   console.log(this, 'akkordion open');
+  // });
  }
 
 }
