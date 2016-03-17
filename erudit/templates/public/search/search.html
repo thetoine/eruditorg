@@ -36,7 +36,7 @@ Query URL: {{ query_url|safe }}
   <div class="row">
 
     {# search form side #}
-    <aside class="col-sm-3">
+    <aside class="col-sm-3 search-form">
 
       <form action="{% url 'public:search:search' %}" id="id-search" method="get" >
 
@@ -58,8 +58,6 @@ Query URL: {{ query_url|safe }}
 
       {% if documents %}
 
-        <p>{% trans "Page" %} {{ current_page }} {% trans "de" %} {{ page_count }}</p>
-
         {% search_result_pagination %}
 
         <ol class="unstyled results">
@@ -69,9 +67,7 @@ Query URL: {{ query_url|safe }}
           </li>
           {% endfor %}
         </ol>
-
-        <p>{% trans "Page" %} {{ current_page }} {% trans "de" %} {{ page_count }}</p>
-
+        
         {% search_result_pagination %}
 
       {% else %}
