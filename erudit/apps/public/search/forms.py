@@ -198,35 +198,13 @@ class SearchFormHelper(FormHelper):
                         ),
                         css_class="advanced-search-fields akkordion-content",
                     ),
-                    css_class="advanced-search akkordion",
+                    css_class="advanced-search akkordion hide",
                 ),
                 Fieldset(
                     "",
                     Div(
-                        HTML(
-                            '<label class="control-label akkordion-title"> \
-                                %s <i class="ion-ios-arrow-down icon"></i> \
-                            </label>'
-                            % _("Trier par")
-                        ),
-                        Div(
-                            Field('sort'),
-                            css_class="akkordion-content",
-                        ),
-                        css_class="akkordion",
-                    ),
-                    Div(
-                        HTML(
-                            '<label class="control-label akkordion-title"> \
-                                %s <i class="ion-ios-arrow-down icon"></i> \
-                            </label>'
-                            % _("Ordre")
-                        ),
-                        Div(
-                            Field('sort_order'),
-                            css_class="akkordion-content",
-                        ),
-                        css_class="akkordion",
+                        Field('sort'),
+                        Field('sort_order'),
                     ),
                 ),
             ),
