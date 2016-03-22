@@ -2,9 +2,9 @@
 {% load search_tags %}
 
 {% if filter_choices %}
-<fieldset class="refine-search-filters">
+<fieldset class="search-filters">
   {# <legend>{% trans "Filtrer les résultats" %}</legend>#}
-    
+
   {% with filter_choices|get_item:"years" as years_filter %}
   {% include "public/search/_checkboxes_filter.html" with title="Années" filter_label="years" filter=years_filter %}
   {% endwith %}
