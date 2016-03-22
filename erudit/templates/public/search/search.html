@@ -18,7 +18,7 @@ Query URL: {{ query_url|safe }}
 
     <header class="page-header-main search-header col-xs-12 border-bottom">
       <hgroup>
-        <h2>{% trans "Résultats de recherche" %}</h2>
+        <h2>{% trans "Résultats de recherche" %} <span class="hint--top hint--no-animate" data-hint="{% trans "Help text!" %}"><i class="ion-help-circled"></i></span></h2>
         {% if documents %}
         <h3><strong>{{ results_count }}</strong> {% trans "résultats trouvé pour la requête :" %}</h3>
         {% else %}
